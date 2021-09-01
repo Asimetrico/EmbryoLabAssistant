@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Swiper demo</title>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="libraries/icon-fonts.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+<div class="container">
+    <h1>Reserva fecha punción</h1>
+    <div class="row">
+        <div class="col s12">
+
+            <div class="carousel">
+                <a class="carousel-item" href="#one!">
+                    <div class="date-header best-day">
+                        <h4>11/09/2021</h4>
+                    </div>
+                    <div class="date-actions grey lighten-5">
+                        <p class="black-text">
+                            <button class="btn-flat">prova</button>
+                        </p>
+                    </div>
+                <a class="carousel-item" href="#two!">
+                    <div class="date-header average-day">
+                        <h4>12/09/2021</h4>
+                    </div>
+                    <div class="date-actions grey lighten-5">
+                        <p class="black-text">This is your first panel</p>
+                    </div>
+                </a>
+                <a class="carousel-item" href="#three!">
+                    <div class="date-header bad-day">
+                        <h4>13/09/2021</h4>
+                    </div>
+                    <div class="date-actions grey lighten-5">
+                        <p class="black-text">This is your first panel</p>
+                    </div>
+                </a>
+                <a class="carousel-item" href="#four!">
+                    <div class="date-header forbidden-day">
+                        <h4>14/09/2021</h4>
+                    </div>
+                    <div class="date-actions grey lighten-5">
+                        <p class="black-text">This is your first panel</p>
+                    </div>
+                </a>
+                <a class="carousel-item" href="#five!">
+                    <div class="date-header best-day">
+                        <h4>15/09/2021</h4>
+                    </div>
+                    <div class="date-actions grey lighten-5">
+                        <p class="black-text">This is your first panel</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!--
+        <div class="col s12">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card grey lighten-5">
+                            <div class="card-content black-text">
+                                <span class="card-title">Card Title</span>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">This is a link</a>
+                                <a href="#">This is a link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card grey lighten-5">
+                            <div class="card-content black-text">
+                                <span class="card-title">Card Title</span>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">This is a link</a>
+                                <a href="#">This is a link</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    -->
+</div>
+<!-- Swiper JS -->
+</div>
+</body>
+</html>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    window.onload = function (){
+        loadCarousel();
+    }
+
+    function loadCarousel(){
+        var options = {
+            dist:-100,
+            shift:10,
+            padding:10,
+            fullWidth: true,
+            indicators: true,
+            noWrap:true,
+            onCycleTo: function (){console.log('prova');}
+        }
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems,options);
+    }
+/*
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 5,
+        spaceBetween: 30,
+        slidesPerGroup: 5,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+ */
+</script>
+
+<style>
+
+    .carousel-item{
+        height:120px;
+        border: solid 1px red;
+    }
+
+    h4{
+        margin: 0px;
+    }
+
+    .date-header{
+        height: 75%;
+        text-align: center;
+        padding-top:3%;
+        color: black;
+        font-weight: bolder;
+    }
+    .date-actions{
+        height: 25%;
+        text-align: center;
+        display: flow-root;
+        color:black;
+    }
+
+    .best-day{
+        background: green;
+    }
+
+    .average-day{
+        background: orange;
+    }
+
+    .bad-day{
+        background: red;
+    }
+
+    .forbidden-day{
+        background: grey;
+    }
+
+    .carousel .indicators .indicator-item {
+        background-color: darkgrey;
+    }
+    .carousel .indicators .indicator-item.active {
+        background-color: dimgrey;
+    }
+</style>
+
+<style>
+    /*
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* padding-top: 3%;
+        font-weight: bolder;
+        */
+
+
+        min-height: 200px;
+        /*        display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: normal;
+        */
+    /*
+    }
+
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
