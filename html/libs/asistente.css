@@ -1,0 +1,173 @@
+body {
+    height: 100%;
+    background-color: #f1f7fd;
+}
+
+label.button-style {
+    padding: 10px;
+    background: #cbe1f7;
+    margin: 5px;
+    border-radius: 10px;
+    color: #3776af;
+    border: 2px solid #3776af;
+    font-weight: bold;
+}
+
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:after {
+    background-color: #3776af;
+}
+
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
+    border: 2px solid #3776af
+}
+
+.arrow {
+    cursor: pointer;
+    color: #3776af;
+}
+
+.btn {
+    background-color: #3776af;
+}
+
+.chip {
+    background-color: #bdd5ed;
+    cursor: pointer;
+}
+
+span#partnertext {
+    color: #3776af;
+}
+
+#title h5 {
+    margin-left: 16px;
+    margin-bottom: 16px;
+}
+
+
+.content {
+    display: flex;
+    height: 250px;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 200px;
+    padding-right: 15px;
+}
+
+.content .btn {
+    background: #a6c6e6;
+}
+
+.box {
+    background: #a6c6e6;
+    height: 50px;
+    border-radius: 10px;
+    color: white;
+}
+
+.active-button {
+    background: #3776af !important;
+}
+
+.content .btn#button-sendform {
+    background: #6a89a9;
+}
+
+.content .btn.disabled {
+    cursor: none;
+}
+
+#partner-name {
+    font-weight: bold;
+}
+
+.title-mainstep {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.dropdown-content li > a,
+.dropdown-content li > span {
+    color: #3776af !important;
+}
+
+input {
+    max-width: 450px;
+    margin-left: 15px;
+}
+
+input.date-picker {
+    max-width: 150px;
+    margin-left: 15px;
+}
+
+.datepicker-date-display,
+.datepicker-table td.is-selected {
+    background: #3776af !important;
+}
+
+.datepicker-cancel,
+.datepicker-clear,
+.datepicker-today,
+.datepicker-done {
+    color: #3776af !important;
+}
+
+
+.switch label input[type=checkbox]:checked + .lever {
+    background-color: #f1f7fd;
+}
+
+.switch label input[type=checkbox]:checked + .lever:after {
+    background-color: #3776af;
+}
+
+.stepforward {
+    background: #a6c6e6;
+    border-radius: 10px;
+    color: white;
+}
+
+.stepforward:hover {
+    background: #3776af !important;
+    border-radius: 10px;
+    color: white;
+}
+
+div#forms {
+    margin-bottom: 10px;
+}
+
+[type="radio"]:not(:checked) + span, [type="radio"]:checked + span {
+    padding-left: 23px;
+}
+
+
+#toast-container {
+    min-width: 90%;
+    top: 85%;
+    right: 5%;
+}
+
+.toast-successcolor {
+    background: #3776af;
+}
+
+.toast-errorcolor {
+    background: red;
+}
+
+.treatment-step {
+    margin-bottom: 30px;
+}
+
+.radio-field {
+    margin-bottom: 15px;
+}
+
+.menu-item{
+    margin: 0.1px;
+}

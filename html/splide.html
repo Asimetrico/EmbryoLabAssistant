@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="../node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css">
+
+</head>
+<body>
+<div class="splide">
+    <div class="splide__track">
+        <ul class="splide__list">
+            <li class="splide__slide">
+                <div class="splide__slide__container">
+                    <img src="...">
+                </div>
+                Lorem Ipsum Dolor Sit Amet
+            </li>
+            <li class="splide__slide">
+                <div class="splide__slide__container">
+                    <img src="...">
+                </div>
+                Lorem Ipsum Dolor Sit Amet
+            </li>
+        </ul>
+    </div>
+</div>
+<!--
+<div class="splide">
+    <div class="splide__track">
+        <ul class="splide__list">
+            <li class="splide__slide">Slide 01</li>
+            <li class="splide__slide">Slide 02</li>
+            <li class="splide__slide">
+                <div class="card">
+                    <div class="title  full">22/05/2021</div>
+                    <div class="body">nº punciones: 23</>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</div>
+-->
+</body>
+</html>
+<style>
+    .card {
+        height: 100%;
+    }
+
+    .card .title {
+        height: 70%;
+    }
+
+    .card. .body {
+        height: 30%;
+    }
+
+    .full {
+        background: red;
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        console.log('ssss');
+        var splide = new Splide('.splide', {
+            type: 'loop',
+            height: '9rem',
+            perPage: 2,
+            breakpoints: {
+                640: {
+                    height: '6rem',
+                },
+            },
+        })
+        splide.mount();
+    });
+</script>
