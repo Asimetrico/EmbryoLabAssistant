@@ -59,7 +59,7 @@
 
         <h6>Fechas recomendadas quirófano</h6>
         <div class="carousel">
-            <a class="carousel-item" href="#one!">
+            <a class="carousel-item" href="#one!" onclick="reserva()">
                 <div class="card-date bad-option">
                     <div class="card-date-body">
                         <strong>11/12/2021</strong>
@@ -72,8 +72,8 @@
 
                 </div>
             </a>
-            <a class="carousel-item" href="#two!">
-                <div class="card-date normal-option">
+            <a class="carousel-item" href="#two!" onclick="reserva()">
+                <div class="card-date normal-option" >
                     <div class="card-date-body">
                         <strong>12/12/2021</strong>
                     </div>
@@ -87,7 +87,7 @@
                 </div>
 
             </a>
-            <a class="carousel-item active" href="#three!">
+            <a class="carousel-item active" href="#three!" onclick="reserva()">
                 <div class="card-date good-option">
                     <div class="card-date-body">
                         <strong>13/12/2021</strong>
@@ -102,7 +102,7 @@
 
 
             </a>
-            <a class="carousel-item" href="#four!">
+            <a class="carousel-item" href="#four!" onclick="reserva()">
                 <div class="card-date best-option">
                     <div class="card-date-body ">
                         <strong>14/12/2021</strong>
@@ -115,7 +115,7 @@
                 </div>
 
             </a>
-            <a class="carousel-item" href="#five!">
+            <a class="carousel-item" href="#five!"  onclick="reserva()">
                 <div class="card-date normal-option">
                     <div class="card-date-body ">
                         <strong>15/12/2000</strong>
@@ -128,7 +128,7 @@
                 </div>
 
             </a>
-            <a class="carousel-item" href="#five!">
+            <a class="carousel-item" href="#five!"  onclick="reserva()">
                 <div class="card-date bad-option">
                     <div class="card-date-body">
                         <strong>16/12/2000</strong>
@@ -352,6 +352,13 @@
             instance2.prev();
         }
     });
+
+    function  reserva(){
+        console.log('reserva');
+        M.toast({html: 'Resevado quirófano'})
+
+
+    }
 </script>
 <style>
 
