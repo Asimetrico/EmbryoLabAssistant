@@ -116,7 +116,7 @@
 
             </a>
             <a class="carousel-item" href="#five!"  onclick="reserva()">
-                <div class="card-date normal-option">
+                <div class="card-date good-option">
                     <div class="card-date-body ">
                         <strong>15/12/2000</strong>
                     </div>
@@ -154,134 +154,12 @@
         </div>
     </div>
 
-    <!--
-        <div class="col s9" id="forms">
-            <form id="formProcess" method="post">
-                <div id="mainstep0" class="mainstep">
-                    <div class="col s12 treatment-step" id="step0">
-                        <span class="title-mainstep">Tipos de proceso</span><br><br>
-                        <label class="button-style">
-                            <input name="group0" type="radio" value="FIV" onchange="checkradio0('FIV');"/>
-                            <span>FIV</span>
-                        </label>
-                        <label class="button-style">
-                            <input name="group0" type="radio" value="FIV" onchange="checkradio0('PSE');"/>
-                            <span>Preservación</span>
-                        </label>
-                    </div>
-                </div>
-                <div id="mainstep1" class="mainstep">
-                    <div class="col s12 treatment-step" id="step1">
-                        <span class="title-mainstep">Tratamiento</span><br><br>
-                        <label class="button-style">
-                            <input name="group2" type="radio" value="AGOLAG" onchange="checkradio1('AGOLAG');"/>
-                            <span>Agonista largo</span>
-                        </label>
 
-                        <label class="button-style">
-                            <input name="group2" type="radio" value="AGOCOR" onchange="checkradio1('AGOCOR');"/>
-                            <span>Agonista corto</span>
-                        </label>
-                        <label class="button-style">
-                            <input name="group2" type="radio" value="ANT" onchange="checkradio1('ANT');"/>
-                            <span>Antagonista</span>
-                        </label>
-
-                        <label class="button-style">
-                            <input name="group2" type="radio" value="NAT" onchange="checkradio1('NAT');"/>
-                            <span>Natural</span>
-                        </label>
-                        <label class="button-style">
-                            <input name="group2" type="radio" value="TSH" onchange="checkradio1('TSH');"/>
-                            <span>THS</span>
-                        </label>
-
-                        <label class="button-style">
-                            <input name="group2" type="radio" value="EST" onchange="checkradio1('EST');"/>
-                            <span>Estudios</span>
-                        </label>
-                    </div>
-
-                    <div class="col s12 treatment-step" id="step2" style="display: none;">
-                        <label class="button-style" id="PIL">
-                            <input name="group3" type="radio" value="PIL" onchange="checkradio2('PIL');"/>
-                            <span>Pills</span>
-                        </label>
-                        <label class="button-style" id="EST">
-                            <input name="group3" type="radio" value="EST" onchange="checkradio2('EST');"/>
-                            <span>Estrógenos</span>
-                        </label>
-                        <label class="button-style" id="NADA">
-                            <input name="group3" type="radio" value="NADA" onchange="checkradio2('NADA');"/>
-                            <span>Sin tratamiento</span>
-                        </label>
-                    </div>
-
-                    <div class="col s12 treatment-step" id="step3" style="display: none;">
-                        <label class="button-style" id="RFSH">
-                            <input name="group3S" type="radio" value="RFSH" onchange="checkradio3('RfSH');"/>
-                            <span>rFSH</span>
-                        </label>
-
-                        <label class="button-style" id="COMBO">
-                            <input name="group3S" type="radio" value="COMBO" onchange="checkradio3('COMBO');"/>
-                            <span>Combo</span>
-                        </label>
-                        <label class="button-style" id="LH">
-                            <input name="group3S" type="radio" value="HMG" onchange="checkradio3('LH');"/>
-                            <span>HMG</span>
-                        </label>
-                    </div>
-
-                    <div class="col s12 treatment-step" id="step4" style="display: none;">
-                        <label class="button-style" id="RHCG">
-                            <input name="group4" type="radio" value="RHCG" onchange="checkradio4('RHCG');"/>
-                            <span>rhCG</span>
-                        </label>
-
-                        <label class="button-style" id="AGO">
-                            <input name="group4" type="radio" value="AGO" onchange="checkradio4('AGO');"/>
-                            <span>Agonista</span>
-                        </label>
-                        <label class="button-style" id="DOBLE">
-                            <input name="group4" type="radio" value="DOBLE" onchange="checkradio4('DOBLE');"/>
-                            <span>Doble descarga</span>
-                        </label>
-                    </div>
-
-                    <div class="col s12 treatment-step" id="step5" style="display: none;">
-                    </div>
-
-                </div>
-
-            </form>
-
-        </div>
-        <div class="col s3" id="steps">
-            <div class="content">
-                <a class="waves-effect waves-light btn active-button menu-item" id="button-mainstep0"
-                   onclick="openstep('mainstep0')">Proceso</a>
-                <a class="waves-effect waves-light btn menu-item" id="button-mainstep1"
-                   onclick="openstep('mainstep1')">Tratamiento</a>
-                <a class="waves-effect waves-light btn disabled menu-item" id="button-mainstep2"
-                   onclick="openstep('mainstep2')">Datos
-                    generales</a>
-                <a class="waves-effect waves-light btn disabled menu-item" id="button-mainstep3"
-                   onclick="openstep('mainstep3')">Pareja</a>
-                <a class="waves-effect waves-light btn disabled menu-item" id="button-mainstep4"
-                   onclick="openstep('mainstep4')">Día
-                    tranferencia</a>
-                <a class="waves-effect waves-light btn disabled menu-item" id="button-mainstep5"
-                   onclick="openstep('mainstep5')">DGP</a>
-                <a class="waves-effect waves-light btn disabled" id="button-sendform"
-                   onclick="disableSendForm();sendform()">Finalizar</a>
-
-            </div>
-
-        </div>
-    -->
 
 </div>
+
+<br>
+<hr>
 
 </body>
 </html>
@@ -411,8 +289,8 @@
 
     }
 
-    .good-option div.card-date-body, .dot.normal-option {
-        background: #0f9d58;
+    .normal-option div.card-date-body, .dot.normal-option {
+        background: orange;
     }
 
     .normal-option {
