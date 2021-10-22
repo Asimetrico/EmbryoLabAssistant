@@ -35,7 +35,7 @@
 
         <div class="input-field col s12">
             <div class="input-field col s12">
-                <input id="menopur" type="number" class="validate" onchange="moveSlider1()">
+                <input id="menopur" type="number" class="validate" onchange="moveSlider2()">
                 <label for="menopur">Menopur</label>
                 <span class="helper-text" data-error="wrong" data-success="Estimulación">Estimulación</span>
             </div>
@@ -43,12 +43,17 @@
 
         <div class="input-field col s12">
             <div class="input-field col s12">
-                <input id="lutea" type="number" class="validate" value="10" onchange=moveSlider2()>
+                <input id="lutea" type="number" class="validate" value="5" onchange=moveSlider2()>
                 <label for="lutea">Utrogestán</label>
                 <span class="helper-text" data-error="wrong" data-success="Estimulación">Fase Lutea</span>
             </div>
         </div>
 
+        <div class="input-field col s12">
+
+            <div id="slider"></div>
+            <div id="slider-value">Utrogestán</div>
+        </div>
     </div>
     <div class="col s8" id="carousel">
 
@@ -60,7 +65,9 @@
                         <strong>11/12/2021</strong>
                     </div>
                     <div class="card-date-footer">
-                        punciones: 24
+                        Punciones: 24
+                        <br>
+                        Transfers: 10
                     </div>
 
                 </div>
@@ -71,8 +78,11 @@
                         <strong>12/12/2021</strong>
                     </div>
                     <div class="card-date-footer">
-                        punciones: 24
+                        Punciones: 15
+                        <br>
+                        Transfers: 5
                     </div>
+
 
                 </div>
 
@@ -83,7 +93,9 @@
                         <strong>13/12/2021</strong>
                     </div>
                     <div class="card-date-footer">
-                        punciones: 24
+                        Punciones: 10
+                        <br>
+                        Transfers: 2
                     </div>
 
                 </div>
@@ -96,9 +108,10 @@
                         <strong>14/12/2021</strong>
                     </div>
                     <div class="card-date-footer">
-                        punciones: 24
+                        Punciones: 5
+                        <br>
+                        Transfers: 1
                     </div>
-
                 </div>
 
             </a>
@@ -108,9 +121,10 @@
                         <strong>15/12/2000</strong>
                     </div>
                     <div class="card-date-footer">
-                        punciones: 24
+                        Punciones: 10
+                        <br>
+                        Transfers: 5
                     </div>
-
                 </div>
 
             </a>
@@ -120,12 +134,22 @@
                         <strong>16/12/2000</strong>
                     </div>
                     <div class="card-date-footer">
-                        punciones: 24
+                        Punciones: 24
+                        <br>
+                        Transfers: 10
                     </div>
-
                 </div>
 
             </a>
+
+        </div>
+
+        <div class="legend">
+            <span class="dot best-option"></span> Mejor opción
+            <span class="dot good-option"></span> Buena opción
+            <span class="dot normal-option"></span> Opción correcta
+            <span class="dot bad-option"></span> Opción no recomendada
+
 
         </div>
     </div>
@@ -269,29 +293,77 @@
         indicators: true,
         noWrap: true,
         dist: -25,
-        shift:5,
-        onCycleTo: function (){
+        shift: 5,
+        onCycleTo: function () {
             console.log('callme');
+            document.querySelector('#lutea').value =5;
+           // if (slider){
+           // slider.noUiSlider.set(6);
+           // }
         }
     };
     var instance2 = M.Carousel.init(elem2, opto);
     instance2.set(3);
 
-    function callme(){
+    function callme() {
         console.log('callme');
+
     }
 
     function moveSlider1() {
         console.log('slide1');
     }
 
+    var item = 3
+
     function moveSlider2() {
         console.log('slide2');
         console.log(instance2);
+        if (item <= document.querySelector('#lutea').value) {
+            instance2.next();
+        } else {
+            instance2.prev();
+        }
+        item = document.querySelector('#lutea').value;
+
     }
 
+
+    var slider = document.getElementById('slider');
+    var slidervalue = document.getElementById('slider-value');
+
+
+    noUiSlider.create(slider, {
+        start: [5],
+        connect: true,
+        tooltips: [ true],
+        range: {
+            'min': 1,
+            'max': 15
+        }
+    });
+
+    slider.noUiSlider.on('update', function (values) {
+        console.log('slider updete')
+       item = values;
+        if (item <= document.querySelector('#lutea').value) {
+            instance2.next();
+        } else {
+            instance2.prev();
+        }
+    });
 </script>
 <style>
+
+
+    .dot {
+        height: 10px;
+        width: 10px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
     .indicator-item.active {
         background: #18988b !important;
     }
@@ -313,42 +385,54 @@
         font-size: xx-large;
     }
 
-    .good-option{
+    .good-option {
         border: solid 1px #0f9d58;
 
     }
-    .good-option div.card-date-body{
+
+    .good-option div.card-date-body, .dot.good-option {
         background: #0f9d58;
     }
-    .best-option{
+
+
+    .best-option {
         border: solid 1px #18988b;
     }
 
-    .best-option  div.card-date-body{
+    .best-option div.card-date-body, .dot.best-option {
         background: #18988b;
 
     }
 
-    .good-option  div.card-date-body{
+    .good-option div.card-date-body, .dot.normal-option {
         background: #0f9d58;
     }
 
-    .normal-option{
+    .normal-option {
         border: solid 1px orange;
     }
-    .normal-option  div.card-date-body{
+
+    .normal-option div.card-date-body {
         background: orange;
     }
 
     .bad-option {
         border: solid 1px #d84848;
     }
-    .bad-option  div.card-date-body{
-        background:#d84848;
+
+    .bad-option div.card-date-body, .dot.bad-option {
+        background: #d84848;
     }
 
     .card-date .card-date-footer {
         background: whitesmoke;
         height: 25%;
+        padding:5px;
+        color:black;
     }
+
+    h4{
+        color: #3776af;
+    }
+
 </style>
