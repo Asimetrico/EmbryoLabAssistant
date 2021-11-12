@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Swiper demo</title>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- Demo styles -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="../node_modules/flag-icon-css/css/flag-icons.css">
+
+</head>
+
+<body style="background: #a1c4e6">
+<div class="container">
+    <div class="row">
+        <br>
+        <div class="col s12 bartitle">
+            <div class="flow-text">Donantes sincrónicas</div>
+            <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">Buscar donantes sincronicas</label>
+            </div>
+        </div>
+        <div class="col s12  line">
+
+            <div class="col s12 item-line">
+                <div class="col s6">
+                    <div class="col s2">
+                        <img width="60" height="60" src="img/Captura2.PNG">
+
+                    </div>
+                    <div class="col s10">
+                        <span class="patient-name">Nombre de la paciente</span> <br>
+                        <strong>Paciente</strong><br>
+                        <strong>Q Carrier</strong> <i class="material-icons" style="vertical-align: bottom;">picture_as_pdf</i>
+
+
+                    </div>
+                    <div class="col s12 table-qr">
+                        <table>
+
+                            <thead>
+
+                            <tr>
+                                <th>Gen</th>
+                                <th>Mutacion</th>
+                                <th>Resultat</th>
+                                <th>Data</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td>CFTR</td>
+                                <td>c.1210-34TG(12)T(5) (NM_000492)</td>
+                                <td>Pathogenic</td>
+                                <td>04/06/2021</td>
+                            </tr>
+                            <tr>
+                                <td>CYP21A2</td>
+                                <td> c.C955T,p.Q319X (NM_000500)</td>
+                                <td>Pathogenic</td>
+                                <td>04/06/2021</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="col s6">
+                    <div class="col s12 partner-line">
+                        <div class="col s2">
+                            <span class="q-carrier good">Q</span>
+                        </div>
+                        <div class="col s10">
+                            <span class="patient-name">Pareja</span>
+                            <strong>Q Carrier</strong> <i class="material-icons" style="vertical-align: bottom;">picture_as_pdf</i>
+                        </div>
+                        <div class="col s12 table-qr">
+                            <table>
+
+                                <thead>
+
+                                <tr>
+                                    <th>Gen</th>
+                                    <th>Mutacion</th>
+                                    <th>Resultat</th>
+                                    <th>Data</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr>
+                                    <td>CFTR</td>
+                                    <td>c.1210-34TG(12)T(5) (NM_000492)</td>
+                                    <td>Pathogenic</td>
+                                    <td>04/06/2021</td>
+                                </tr>
+                                <tr>
+                                    <td>CYP21A2</td>
+                                    <td> c.C955T,p.Q319X (NM_000500)</td>
+                                    <td>Pathogenic</td>
+                                    <td>04/06/2021</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="col s12 partner-line">
+                        <hr>
+                    </div>
+                    <div class="col s12 partner-line">
+                        <div class="col s2">
+                            <span class="q-carrier bad">Q</span>
+                        </div>
+                        <div class="col s10">
+                            <span class="patient-name">Donante de Semen</span>
+                            <strong>Q Carrier</strong> <i class="material-icons" style="vertical-align: bottom;">picture_as_pdf</i>
+                        </div>
+
+                        <div class="col s12 table-qr">
+                            <table>
+
+                                <thead>
+
+                                <tr>
+                                    <th>Gen</th>
+                                    <th>Mutacion</th>
+                                    <th>Resultat</th>
+                                    <th>Data</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr>
+                                    <td>CFTR</td>
+                                    <td>c.1210-34TG(12)T(5) (NM_000492)</td>
+                                    <td>Pathogenic</td>
+                                    <td>04/06/2021</td>
+                                </tr>
+                                <tr>
+                                    <td>CYP21A2</td>
+                                    <td> c.C955T,p.Q319X (NM_000500)</td>
+                                    <td>Pathogenic</td>
+                                    <td>04/06/2021</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12">
+            <hr>
+        </div>
+        <div class="col s12  line">
+
+            <div class="col s12 item-line">
+                <div class="col s6">
+                    <div class="col s2">
+                        <img width="60" height="60" src="img/Captura1.PNG">
+
+                    </div>
+                    <div class="col s7">
+                        <span class="patient-name">Nombre de la donante</span> <br>
+                        <strong>DONANTE</strong><br>
+                        <strong>Q Carrier</strong> <i class="material-icons" style="vertical-align: bottom;">picture_as_pdf</i>
+                    </div>
+                    <div class="col s3">
+                        <i class="material-icons" style="vertical-align: bottom;font-size: 40px;color:#2e6faa;">thumb_up</i>
+                    </div>
+                    <div class="col s12 table-qr">
+                        <table>
+
+                            <thead>
+
+                            <tr>
+                                <th>Gen</th>
+                                <th>Mutacion</th>
+                                <th>Resultat</th>
+                                <th>Data</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td>CFTR</td>
+                                <td>c.1210-34TG(12)T(5) (NM_000492)</td>
+                                <td>Pathogenic</td>
+                                <td>04/06/2021</td>
+                            </tr>
+                            <tr>
+                                <td>CYP21A2</td>
+                                <td> c.C955T,p.Q319X (NM_000500)</td>
+                                <td>Pathogenic</td>
+                                <td>04/06/2021</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="col s6">
+                    <div class="col s12 partner-line">
+                        <div class="col s2">
+                            <span class="q-carrier good">Q</span>
+                        </div>
+                        <div class="col s10">
+                            <span class="patient-name">Pareja</span>
+                            <strong>Q Carrier</strong> <i class="material-icons" style="vertical-align: bottom;">picture_as_pdf</i>
+                        </div>
+                        <div class="col s12 table-qr">
+                            <table>
+
+                                <thead>
+
+                                <tr>
+                                    <th>Gen</th>
+                                    <th>Mutacion</th>
+                                    <th>Resultat</th>
+                                    <th>Data</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr>
+                                    <td>CFTR</td>
+                                    <td>c.1210-34TG(12)T(5) (NM_000492)</td>
+                                    <td>Pathogenic</td>
+                                    <td>04/06/2021</td>
+                                </tr>
+                                <tr>
+                                    <td>CYP21A2</td>
+                                    <td> c.C955T,p.Q319X (NM_000500)</td>
+                                    <td>Pathogenic</td>
+                                    <td>04/06/2021</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="col s12 partner-line">
+                        <hr>
+                    </div>
+                    <div class="col s12 partner-line">
+                        <div class="col s2">
+
+                        </div>
+                        <div class="col s10">
+                            <span class="patient-name">Donante de Semen</span>
+                            <strong>Q Carrier no aplica</strong>
+                        </div>
+
+                        <div class="col s12 table-qr">
+                            <table>
+
+                                <thead>
+
+                                <tr>
+                                    <th>Gen</th>
+                                    <th>Mutacion</th>
+                                    <th>Resultat</th>
+                                    <th>Data</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr>
+                                    <td colspan="4">No aplica</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+</div>
+</body>
+</html>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+<style>
+
+    .partner-line {
+        line-height: 1;
+    }
+
+    .q-carrier {
+        font-weight: bolder;
+        font-size: 36px;
+
+    }
+
+    .good {
+        color: green;
+    }
+
+    .bad {
+        color: grey;
+    }
+
+    .patient-name {
+        font-size: 15px;
+        font-weight: bold;
+        color: #2e6faa;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .table-qr {
+        line-height: 1px;
+    }
+
+    .item-line {
+        padding: 5px;
+        margin-top: 5px;
+    }
+
+    .bartitle {
+        background-color: #2e6faa;
+        color: #ffffff;
+        display: inline-flex;
+
+    }
+
+    .line {
+        background: #e6e6e6;
+    }
+
+    .carousel-item {
+        height: 120px;
+        border: solid 1px red;
+    }
+
+    h4 {
+        margin: 0px;
+    }
+
+    .date-header {
+        height: 75%;
+        text-align: center;
+        padding-top: 3%;
+        color: black;
+        font-weight: bolder;
+    }
+
+    .date-actions {
+        height: 25%;
+        text-align: center;
+        display: flow-root;
+        color: black;
+    }
+
+    .best-day {
+        background: green;
+    }
+
+    .average-day {
+        background: orange;
+    }
+
+    .bad-day {
+        background: red;
+    }
+
+    .forbidden-day {
+        background: grey;
+    }
+
+    .carousel .indicators .indicator-item {
+        background-color: darkgrey;
+    }
+
+    .carousel .indicators .indicator-item.active {
+        background-color: dimgrey;
+    }
+</style>
+
+<style>
+    /*
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* padding-top: 3%;
+        font-weight: bolder;
+        */
+
+
+    min-height:
+
+    200
+    px
+
+    ;
+    /*        display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: normal;
+    */
+    /*
+    }
+
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>

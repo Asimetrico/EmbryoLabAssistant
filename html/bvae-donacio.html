@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Swiper demo</title>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="../node_modules/flag-icon-css/css/flag-icons.css">
+
+</head>
+
+<body style="background: #e6e6e6">
+<div class="container">
+    <div class="col s4">
+        <table style="width:inherit;font-weight:  bold;">
+            <thead>
+            <tr>
+                <th>País</th>
+                <th>Nacimientos</th>
+                <th>Embarazos</th>
+                <th>Laboratorio</th>
+                <th>Ovocitos asignados</th>
+                <th>Total reservados</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td><span class="flag-icon flag-icon-es"></span></td>
+                <td>1</td>
+                <td>2</td>
+                <td>1</td>
+                <td>1</td>
+                <td>5</td>
+
+            </tr>
+            <tr>
+                <td><span class="flag-icon flag-icon-fr"></span></td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+
+            </tr>
+            <tr style="background: lightgrey;">
+                <td><span class="flag-icon flag-icon-un"></span></td>
+                <td>1</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+                <td>6</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+</body>
+</html>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    window.onload = function () {
+        loadCarousel();
+    }
+
+    function loadCarousel() {
+        var options = {
+            dist: -100,
+            shift: 10,
+            padding: 10,
+            fullWidth: true,
+            indicators: true,
+            noWrap: true,
+            onCycleTo: function () {
+                console.log('prova');
+            }
+        }
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, options);
+    }
+
+    /*
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 5,
+            spaceBetween: 30,
+            slidesPerGroup: 5,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+     */
+</script>
+
+<style>
+
+    .carousel-item {
+        height: 120px;
+        border: solid 1px red;
+    }
+
+    h4 {
+        margin: 0px;
+    }
+
+    .date-header {
+        height: 75%;
+        text-align: center;
+        padding-top: 3%;
+        color: black;
+        font-weight: bolder;
+    }
+
+    .date-actions {
+        height: 25%;
+        text-align: center;
+        display: flow-root;
+        color: black;
+    }
+
+    .best-day {
+        background: green;
+    }
+
+    .average-day {
+        background: orange;
+    }
+
+    .bad-day {
+        background: red;
+    }
+
+    .forbidden-day {
+        background: grey;
+    }
+
+    .carousel .indicators .indicator-item {
+        background-color: darkgrey;
+    }
+
+    .carousel .indicators .indicator-item.active {
+        background-color: dimgrey;
+    }
+</style>
+
+<style>
+    /*
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* padding-top: 3%;
+        font-weight: bolder;
+        */
+
+
+    min-height:
+
+    200
+    px
+
+    ;
+    /*        display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: normal;
+    */
+    /*
+    }
+
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
